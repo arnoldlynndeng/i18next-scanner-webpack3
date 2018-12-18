@@ -1,4 +1,4 @@
-## i18next-scanner-webpack3
+## i18next-scanner-webpack-plugin
 
 This is a simple i18n-scanner webpack-plugin.
 Based on this package: [i18next-scanner](https://github.com/i18next/i18next-scanner).
@@ -7,7 +7,7 @@ Based on this package: [i18next-scanner](https://github.com/i18next/i18next-scan
 
 ```javascript
 const path = require('path');
-const i18nextWebpackPlugin3 = require('i18next-scanner-webpack3');
+const i18nextWebpackPlugin = require('i18next-scanner-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -16,7 +16,7 @@ module.exports = {
     filename: '[name].js'
   },
   plugins: [
-    new i18nextWebpackPlugin3({
+    new i18nextWebpackPlugin({
       // See options at https://github.com/i18next/i18next-scanner#options
       // src defaults to ./src
       // dist defaults to ./locales
@@ -38,32 +38,3 @@ module.exports = {
   ]
 };
 ```
-
-**Minimal setup:**
-```javascript
-const path = require('path');
-const i18nextWebpackPlugin3 = require('i18next-scanner-webpack3');
-
-module.exports = {
-  entry: path.resolve(__dirname, './src/index.js'),
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
-  },
-  plugins: [
-    new i18nextWebpackPlugin({
-      options: {
-        lngs: ['en', 'de']
-      }
-    })
-  ]
-};
-```
-
-| Name    | Description                                    | default   | Optional |
-| ------- | ---------------------------------------------- | --------- | -------- |
-| src     | source path of files with i18next translations | ./src     | yes      |
-| dist    | destination of translation files               | ./locales | yes      |
-| options | all options                                    |           | yes      |
-
-Available options: [here](https://www.i18next.com/configuration-options.html)

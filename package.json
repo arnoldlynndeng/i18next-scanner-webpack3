@@ -1,5 +1,5 @@
 {
-  "name": "i18next-scanner-webpack3",
+  "name": "i18next-scanner-webpack-plugin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
