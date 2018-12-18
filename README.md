@@ -1,6 +1,4 @@
-## i18next-scanner-webpack
-
-[![npm](https://img.shields.io/npm/v/i18next-scanner-webpack.svg)](https://www.npmjs.com/package/i18next-scanner-webpack)
+## i18next-scanner-webpack3
 
 This is a simple i18n-scanner webpack-plugin.
 Based on this package: [i18next-scanner](https://github.com/i18next/i18next-scanner).
